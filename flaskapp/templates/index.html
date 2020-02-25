@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h2>Predict a Pet's adoption speed?</h2>
+<p>Input the following information and click submit to make a prediction.</p>
+
+<form action="/" method="post" class="add-entry">
+    <div class="section">
+        <div class="form-group">
+            <br>{{ generate_input_lines() | safe }}
+            <br><input type="submit" class="btn btn-success" value="Submit">
+        </div>
+    </div>
+</form>
+
+{% endblock %}
