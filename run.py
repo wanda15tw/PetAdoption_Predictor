@@ -82,18 +82,18 @@ if __name__ == "__main__":
 	X_train['AdoptionSpeed'] = y_train
 	train = X_train
 
-    # Modeling
-    ## Model selection
-    metrics, clfs, best_model, best_metrics = model_selection(train)
-    # pickle.dump(best_model, open(os.path.join(HOME, MODEL_DIR, 'best_model2'), 'ab'))
+	# Modeling
+	## Model selection
+	metrics, clfs, best_model, best_metrics = model_selection(train)
+	# pickle.dump(best_model, open(os.path.join(HOME, MODEL_DIR, 'best_model2'), 'ab'))
 
 
-    # make prediction by the best_model
-    y_test = best_model.predict(test)
+	# make prediction by the best_model
+	y_test = best_model.predict(test)
 
-    # make submission
-    submission = pd.DataFrame()
-    submission['PetID'] = test_PetID
-    submission['AdoptionSpeed'] = y_test
+	# make submission
+	submission = pd.DataFrame()
+	submission['PetID'] = test_PetID
+	submission['AdoptionSpeed'] = y_test
 
-    submission.to_csv(os.path.join(HOME, REPORT_DIR, 'submission.csv'))
+	submission.to_csv(os.path.join(HOME, REPORT_DIR, 'submission.csv'))
