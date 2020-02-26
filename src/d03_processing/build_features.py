@@ -134,20 +134,16 @@ def processing(df):
     ## feature selection
     df = df.loc[:, ['Type', 'Age', 'top_breed', 'breed_cnt', 'Gender', 'Color1', 'color_cnt', 'MaturitySize', 'FurLength', 'Vaccinated', 'Dewormed',
        'Sterilized', 'Health', 'Quantity', 'Fee', 'State', 'VideoAmt', 'PhotoAmt', 'docsentiment-score', 'top entity', 
-       'lda_topic', 'nmf_output', 'Desc_WC', 'AdoptionSpeed']]
+       'lda_topic', 'nmf_output', 'Desc_WC']]
 
     ## Imputation for missing values
     df.loc[df['docsentiment-score'].isnull(), 'docsentiment-score'] = 0
     
-    if 'AdoptionSpeed' in df.columns:
-    	df['AdoptionSpeed'] = df['AdoptionSpeed'].values.codes
 
     ## Encoding
     df = encoding(df)
     ## Scaling for numerical features
     df = scaling(df)
-
-
 
     return df
 

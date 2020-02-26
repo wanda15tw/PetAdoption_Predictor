@@ -58,7 +58,7 @@ def make_sentiment_df(df, data_type='train'):
 		df.loc[df['PetID']==petid, 'docsentiment-magnitude'] = api['documentSentiment']['magnitude']
 		df.loc[df['PetID']==petid, 'docsentiment-score'] = api['documentSentiment']['score']
 		df.loc[df['PetID']==petid, 'top entity'] = api['entities'][0]['name'] if len(api['entities'])>0 else None
-	print(f'finish parsing sentiments for \"{data_type}\" in {time.time()-t0}')
+	print(f'finished parsing sentiments for \"{data_type}\" in {time.time()-t0}')
 	return df
 
 
