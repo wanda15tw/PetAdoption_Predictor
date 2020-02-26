@@ -7,8 +7,8 @@ This project is inspired by Kaggle competition: [PetFinder.my Adoption Predictio
 This repository mainly consists of `src` and `flaskapp`, and excluding raw data, intermediate and processed data, etc.
 * `src`: source codes of all data pipelines
 * `flaskapp`: source codes to host a simple app to make a new pet's adoption speed
-
-## `SRC`
+## [SRC](../src/)
+## [SRC](../src)
 * `d01_data.read_data.py`: read provided `.csv` files into Pandas DataFr
 * `d02_intermeidate.preprocessing.py`: preprocessing
 * `d03_processing.build_features.py`: processing to build features for modeling
