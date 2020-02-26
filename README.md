@@ -8,14 +8,14 @@ This repository mainly consists of `src` and `flaskapp`, and excluding raw data,
 * `src`: source codes of all data pipelines
 * `flaskapp`: source codes to host a simple app to make a new pet's adoption speed
 
-## `SRC`
+## [src](/src)
 * `d01_data.read_data.py`: read provided `.csv` files into Pandas DataFr
 * `d02_intermeidate.preprocessing.py`: preprocessing
 * `d03_processing.build_features.py`: processing to build features for modeling
 * `d04_modeling.train_model.py`: training & model_selection
 * `d04_modeling.predict_model.py`: 
 
-## `flaskapp`
+## [flaskapp](/flaskapp)
 
 * Under the directory, run `python app.py` to start a simple flask app
 * Open browser and navigate to `localhost:5000` to *GET* the input page
